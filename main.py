@@ -66,31 +66,6 @@ def example7(data: int = None):
         print("Data is not None")
 
 
-def example9():
-    # Виправлено: Запобігання SQL-ін'єкції за допомогою параметризованих запитів
-    import sqlite3
-    user_input = input("Enter your username: ")
-    conn = sqlite3.connect('database.db')
-    cursor = conn.cursor()
-    query = "SELECT * FROM users WHERE username = ?"
-    cursor.execute(query, (user_input,))
-    result = cursor.fetchall()
-    print(result)
-
-
-def example10():
-    # Виправлено: Обробка конкретних помилок
-    try:
-        num = int(input("Enter a number: "))
-        print(num)
-    except ValueError:
-        print("Invalid number")
-    except Exception as e:
-        print(f"Unknown error occurred: {e}")
-    finally:
-        print("Execution completed")
-
-
 def example11():
     # Виправлено: Покращено використання регулярних виразів
     pattern = r"\d{4}-\d{2}-\d{2}"
@@ -129,7 +104,5 @@ example4()
 example5()
 example6()
 example7()
-example9()
-example10()
 example11()
 example12()
