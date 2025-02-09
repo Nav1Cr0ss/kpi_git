@@ -96,6 +96,7 @@ def example12():
     print(shared_var)
 
 
+
 # Виклик усіх функцій для демонстрації
 example1()
 example2()
